@@ -1,0 +1,10 @@
+[server]
+server_address = "127.0.0.1"
+port = 9090
+
+[logging]
+log_level = "debug"
+
+[testing]
+error_rate = 0.5
+response_delay_ms = 200

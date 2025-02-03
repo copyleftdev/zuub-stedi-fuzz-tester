@@ -1,0 +1,5 @@
+server_address = "127.0.0.1"
+port = 8080
+log_level = "info"
+error_rate = 0.01
+response_delay_ms = 100
