@@ -3,3 +3,15 @@ port = 8080
 log_level = "info"
 error_rate = 0.01
 response_delay_ms = 100
+
+
+[dental]
+service_type_codes = ["40", "41", "42", "43", "44", "45", "46", "47", "48"]
+benefits = [
+  { code = "DP", name = "Preventive Dental Care", min_amount = 100, max_amount = 500 },
+  { code = "DR", name = "Restorative Dental Care", min_amount = 500, max_amount = 1500 },
+  { code = "DC", name = "Cosmetic Dental Care", min_amount = 1000, max_amount = 3000 },
+  { code = "DE", name = "Emergency Dental Care", min_amount = 2000, max_amount = 4000 },
+  { code = "DI", name = "Dental Implants", min_amount = 3000, max_amount = 6000 },
+  { code = "DO", name = "Orthodontic Dental Care", min_amount = 1500, max_amount = 3500, probability = 0.5 }
+]

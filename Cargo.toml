@@ -19,6 +19,7 @@ chrono = "0.4"
 async-trait = "0.1"
 config = "0.13"
 thiserror = "1.0"
+fake = "3.1.0"
 
 [dev-dependencies]
 actix-rt = "2.9"
