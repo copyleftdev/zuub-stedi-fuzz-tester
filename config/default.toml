@@ -1,17 +1,30 @@
-server_address = "127.0.0.1"
-port = 8080
-log_level = "info"
-error_rate = 0.01
-response_delay_ms = 100
-
+server_address    = "127.0.0.1"   # Bind to localhost
+port              = 8080          # Server listens on port 8080
+log_level         = "info"        # Informational logging enabled
+error_rate        = 0.01          # 1% simulated error rate for testing robustness
+response_delay_ms = 100           # Introduce a 100 ms response delay
 
 [dental]
+
 service_type_codes = ["40", "41", "42", "43", "44", "45", "46", "47", "48"]
+
 benefits = [
-  { code = "DP", name = "Preventive Dental Care", min_amount = 100, max_amount = 500 },
-  { code = "DR", name = "Restorative Dental Care", min_amount = 500, max_amount = 1500 },
-  { code = "DC", name = "Cosmetic Dental Care", min_amount = 1000, max_amount = 3000 },
-  { code = "DE", name = "Emergency Dental Care", min_amount = 2000, max_amount = 4000 },
-  { code = "DI", name = "Dental Implants", min_amount = 3000, max_amount = 6000 },
-  { code = "DO", name = "Orthodontic Dental Care", min_amount = 1500, max_amount = 3500, probability = 0.5 }
+  { code = "DP",  name = "Preventive Dental Care",       min_amount = 75,   max_amount = 300 },
+  { code = "DX",  name = "Diagnostic Services",           min_amount = 50,   max_amount = 200 },
+  { code = "DR",  name = "Restorative Dental Care",       min_amount = 250,  max_amount = 1500 },
+  { code = "DE",  name = "Emergency Dental Care",         min_amount = 300,  max_amount = 2000 },
+  { code = "DI",  name = "Dental Implants",               min_amount = 3500, max_amount = 8000 },
+  { code = "DO",  name = "Orthodontic Dental Care",       min_amount = 4000, max_amount = 12000, probability = 0.4 },
+  { code = "DP1", name = "Periodontal Treatment",         min_amount = 200,  max_amount = 1000 },
+  { code = "ED",  name = "Endodontic Treatment",          min_amount = 300,  max_amount = 1200 },
+  { code = "PC",  name = "Prosthodontic Care",            min_amount = 500,  max_amount = 2500 },
+  { code = "OS",  name = "Oral Surgery",                  min_amount = 250,  max_amount = 1500 },
+
+  # Additional benefits
+  { code = "CD",  name = "Cosmetic Dentistry",            min_amount = 300,  max_amount = 2000 },
+  { code = "SED", name = "Sedation Dentistry",            min_amount = 150,  max_amount = 500 },
+  { code = "PED", name = "Pediatric Dental Care",         min_amount = 50,   max_amount = 150 },
+  { code = "DS",  name = "Dental Sealants",               min_amount = 30,   max_amount = 100 },
+  { code = "TD",  name = "Teledentistry Consultation",    min_amount = 20,   max_amount = 100 },
+  { code = "ORH", name = "Oral Rehabilitation",           min_amount = 600,  max_amount = 3000 }
 ]
